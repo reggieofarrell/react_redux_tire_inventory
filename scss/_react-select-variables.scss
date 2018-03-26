@@ -1,0 +1,6 @@
+// react-select overrides
+
+$select-option-focused-bg:            #428bca !default;
+$select-option-selected-bg:           lighten($select-option-focused-bg, 20%) !default;
+$select-option-selected-color:        #fff !default;
+$select-option-focused-color:         $select-option-selected-color !default;

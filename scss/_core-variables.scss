@@ -1,0 +1,36 @@
+// core overrides
+$navbar-bg:                           #2A363C !default;
+$navbar-brand-bg:                     #2A363C !default;
+
+$navbar-border: (
+  bottom: (
+    size:                             1px,
+    style:                            solid,
+    color:                            black
+  )
+)  !default;
+
+$navbar-brand-border: (
+  bottom: (
+    size:                             1px,
+    style:                            solid,
+    color:                            black
+  )
+) !default;
+
+$navbar-color:                        $gray-100 !default;
+$navbar-hover-color:                  $gray-300 !default;
+
+$sidebar-width:                       225px !default;
+
+$sidebar-nav-link-active-color:       #fff !default;
+$sidebar-nav-link-active-bg:          #3a4d54 !default;
+$sidebar-nav-link-active-icon-color:  theme-color("primary") !default;
+$sidebar-nav-link-active-borders:     0 !default;
+
+$sidebar-nav-link-hover-color:        #fff !default;
+$sidebar-nav-link-hover-bg:           darken($sidebar-nav-link-active-bg, 5%) !default;
+$sidebar-nav-link-hover-icon-color:   #fff !default;
+$sidebar-nav-link-hover-borders:      0 !default;
+
+$select-option-focused-bg:            black !default; // pale blue

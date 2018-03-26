@@ -1,0 +1,219 @@
+// Here you can add other styles
+
+.main .container-fluid {
+  padding: 0 20px;
+}
+
+// React BS Table
+.number-filter {
+  .number-filter-comparator {
+    width: 43px !important;
+  }
+
+  .number-filter-input {
+    width: 100% !important;
+  }
+}
+
+.date-filter {
+  .date-filter-comparator {
+    width: 43px !important;
+  }
+}
+
+.open > .dropdown-menu, .show > .dropdown-menu {
+  display: block;
+}
+
+.bs-table-dropdown {
+  overflow: inherit !important;
+}
+
+.react-bs-container-body {
+  min-height: 400px;
+}
+
+.react-bs-table-pagination {
+  @media only screen and (max-width : 767px) {
+    text-align: center;
+  }
+
+  .react-bootstrap-table-page-btns-ul {
+    @media only screen and (max-width : 767px) {
+      float: none;
+      margin-top: 1rem;
+      justify-content: center;
+    }
+  }
+}
+// END React Bootstrap Table
+
+.custom-checkbox {
+  margin-left: 1rem;
+  @media only screen and (max-width : 767px) {
+    margin-left: 3px !important;
+  }
+}
+
+.title-icon {
+  margin-right: .25rem;
+}
+
+.sidebar-nav {
+  .nav-dropdown-items {
+    i {
+      margin-left: 1rem;
+    }
+  }
+}
+
+.user-menu {
+  a {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
+
+.react-bs-table-sizePerPage-dropdown {
+  display: none !important;
+}
+
+.table-button-group {
+  margin-bottom: 5px;
+  margin-left: 3px;
+}
+
+.table th, .table td {
+  padding: .5rem;
+  vertical-align: middle;
+}
+
+// BS Notifier Icon Fix
+.alert-dismissable {
+  i {
+    opacity: initial;
+    margin-top: 4px ;
+    padding-right: 10px;
+  }
+
+  button.close {
+    margin-top: -12px;
+    margin-right: -12px;
+    color: black;
+    opacity: 0.1;
+  }
+
+  h4 {
+    margin-right: 8px;
+  }
+
+}
+
+// .alert-success i {
+//   opacity: initial;
+//   margin-top: 4px ;
+//   padding-right: 10px
+// }
+//
+// .alert-success {
+//   button.close {
+//     margin-top: -12px;
+//     margin-right: -12px;
+//     color: black;
+//     opacity: 0.1;
+//   }
+//
+//   h4 {
+//     margin-right: 8px;
+//   }
+// }
+
+button:focus {
+  outline: none;
+}
+
+.dropdown-menu {
+  -webkit-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.75);
+}
+
+// .table-bordered th, .table-bordered td {
+//     border: 1px solid #c2cfd6;
+// }
+
+// .griddle-settings {
+//   display: none;
+//   background-color: transparent;
+// }
+
+.griddle-filter + div {
+  display: none;
+}
+
+.over-limit {
+  color: #f86c6b;
+  font-weight: 500;
+}
+
+.input-group-addon {
+  &.is-invalid {
+    border-color: #f86c6b;
+  }
+}
+
+.is-invalid {
+  h1, h2, h3, h4, h5, h6 {
+    color: #f86c6b;
+    font-weight: 500;
+  }
+
+
+  .form-control-feedback {
+    color: #f86c6b;
+    font-weight: 500;
+  }
+}
+
+.react-bs-table-no-data {
+  text-align: left;
+}
+
+.background-white {
+  background-color: #fff;
+}
+
+
+// .rw-widget-container {
+//   border: none;
+// }
+//
+// .rw-widget {
+//   &.form-control {
+//     padding: 0 !important;
+//   }
+// }
+
+.Select {
+  &.form-conrol {
+    padding: 0 0 0 0 !important;
+  }
+  padding: 0 0 0 0 !important;
+}
+
+.Select-control {
+  border: none !important;
+}
+
+.react-datepicker__input-container {
+  width: 100%;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
+}
