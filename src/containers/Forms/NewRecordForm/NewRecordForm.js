@@ -5,7 +5,7 @@ import { createRecord, updateRecord, fetchCollection } from '../../../actions/cr
 import { createAlert, deleteAlert } from '../../../actions';
 import classNames from 'classnames';
 import { renderComponent, syncValidation } from '../form_utils';
-import CustomCheckbox from '../../../components/CustomCheckbox/CustomCheckbox';
+import CustomCheckbox from '../../../components/CustomCheckbox';
 
 
 export class NewRecordForm extends Component {
@@ -54,13 +54,10 @@ export class NewRecordForm extends Component {
   }
 
   triggerSubmit() {
-    console.log('trigger submit');
     this.refs.realSubmit.click();
   }
 
   handleFormSubmit(values) {
-
-      console.log('submitting form');
       this.setState({isSubmitting: true});
 
       const {
@@ -77,11 +74,6 @@ export class NewRecordForm extends Component {
       } = this.props;
 
       const data = JSON.stringify(values);
-
-      console.log('props', this.props);
-
-      // console.log('form submit values: ', data);
-
 
       if (type === 'New') {
         createRecord(endpoint, data,

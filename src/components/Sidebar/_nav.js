@@ -6,10 +6,6 @@ export default {
       name: 'Dashboard',
       url: '/dashboard',
       icon: 'icon-speedometer',
-      // badge: {
-      //   variant: 'info',
-      //   text: 'NEW'
-      // }
     },
     {
       name: 'Suppliers',
@@ -21,14 +17,8 @@ export default {
       url: '/avails',
       icon: 'icon-list',
     },
-    // {
-    //   name: 'FOB Locations',
-    //   url: '/fob-locations',
-    //   icon: 'icon-location-pin',
-    // },
     {
       name: 'Options',
-      // url: '/options',
       icon: 'icon-equalizer',
       children: [
 
@@ -71,7 +61,6 @@ export default {
     },
     {
       name: 'Admin',
-      // url: '/options',
       icon: 'icon-settings',
       role: 'admin',
       children: [

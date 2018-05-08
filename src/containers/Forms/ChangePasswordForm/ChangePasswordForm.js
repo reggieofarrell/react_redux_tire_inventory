@@ -5,12 +5,8 @@ import { setUser, createAlert } from '../../../actions';
 import { updateRecord } from '../../../actions/crud_actions';
 import { Row, Col } from 'reactstrap';
 import classNames from 'classnames';
-import { swal } from 'react-redux-sweetalert2';
 import { renderComponent, syncValidation } from '../form_utils';
-// import ChangePasswordModal from '../../../components/Modals/ChangePasswordModal';
-// import axios from 'axios';
 import { client } from '../../../actions/client';
-// import { formFields } from './_config'
 
 class ChangePasswordForm extends Component {
   constructor(props){
@@ -165,7 +161,7 @@ function mapStateToProps(state, ownProps) {
   }
 }
 
-ChangePasswordForm = connect(mapStateToProps, {updateRecord, createAlert, ...swal})(ChangePasswordForm);
+ChangePasswordForm = connect(mapStateToProps, {updateRecord, createAlert})(ChangePasswordForm);
 
 // below is also taking care of connecting actions
 export default reduxForm({

@@ -19,18 +19,6 @@ export default class CustomCheckbox extends Component {
     }
   }
 
-  // componentDidUpdate(prevProps, prevState) {
-  //   if (this.state.checked) {
-  //     console.log(`${this.props.label} is checked!`)
-  //     // this.props.checkedCallback();
-  //   }
-  //
-  //   if (!this.state.checked) {
-  //     console.log(`${this.props.label} is un-checked!`)
-  //     // this.props.checkedCallback();
-  //   }
-  // }
-
   toggle(event) {
     if (!this.state.checked) {
       this.props.checkedCallback();

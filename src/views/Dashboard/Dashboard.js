@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-// import { connect } from 'react-redux';
-// import { createAlert } from '../../actions';
 
 class Dashboard extends Component {
   constructor(props){

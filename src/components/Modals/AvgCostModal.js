@@ -22,7 +22,6 @@ class AvgCostModal extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    // console.log('avg cost modal next props', nextProps);
     if (this.state.avgCost !== nextProps.avgCost) {
       this.setState({avgCost: nextProps.avgCost});
     }
@@ -32,20 +31,12 @@ class AvgCostModal extends Component {
     const filteredResults = this.props.getFilteredResults();
     const unitCosts = filteredResults.map(record => +record.Cost);
     const topCost = Math.max(...unitCosts);
-    // console.log('top cost', topCost);
     const bottomCost = Math.min(...unitCosts);
-    // console.log('bottom cost', bottomCost);
-
     const trimmedResults =  filteredResults.filter(record => +record.Cost < topCost && +record.Cost > bottomCost);
-
     const trimmedTotalCosts = trimmedResults.map(record => +record.TotalCost);
-    // console.log('trimmed costs', costs);
     const combinedTotalCost = trimmedTotalCosts.reduce((a, b) => a + b, 0);
-    // console.log('trimmed combinedTotalCost', combinedTotalCost);
-    // const numRecords = trimmedTotalCosts.length;
     const qtys = trimmedResults.map(record => +record.Quantity);
     const numRecords = qtys.reduce((a, b) => a + b, 0);
-    // console.log('trimmed numRecords', numRecords);
     const avgCost = (+combinedTotalCost / +numRecords).toFixed(2);
 
     this.setState({avgCost: avgCost});
@@ -54,21 +45,15 @@ class AvgCostModal extends Component {
   getAvgCost() {
     const filteredResults = this.props.getFilteredResults();
     const costs = filteredResults.map(record => +record.TotalCost);
-    // console.log('costs', costs);
     const combinedCost = costs.reduce((a, b) => a + b, 0);
-    // console.log('combinedCost', combinedCost);
-    // const numRecords = costs.length;
     const qtys = filteredResults.map(record => +record.Quantity);
     const numRecords = qtys.reduce((a, b) => a + b, 0);
-    // console.log('numRecords', numRecords);
     const avgCost = (+combinedCost / +numRecords).toFixed(2);
 
     this.setState({ avgCost: avgCost });
   }
 
   render() {
-    // console.log('avgCost in modal', this.state.avgCost.toLocaleString());
-    // const displayCost = this.state.avgCost.toLocaleString();
     return (
       <Modal toggle={this.props.toggle} isOpen={this.props.isOpen} >
         <ModalHeader toggle={this.props.toggle} >Average Cost</ModalHeader>

@@ -5,10 +5,8 @@ import { setUser, createAlert } from '../../../actions';
 import { updateRecord } from '../../../actions/crud_actions';
 import { Row, Col } from 'reactstrap';
 import classNames from 'classnames';
-import { swal } from 'react-redux-sweetalert2';
 import { renderComponent, syncValidation } from '../form_utils';
-import ChangePasswordModal from '../../../components/Modals/ChangePasswordModal';
-// import { formFields } from './_config'
+import { ChangePasswordModal } from '../../../components/Modals';
 
 class MyAccountForm extends Component {
   constructor(props){
@@ -66,18 +64,7 @@ class MyAccountForm extends Component {
     );
   }
 
-  handleChangePassword() {
-    const swalOptions = {
-      title: 'Hello!',
-    	text: 'How you doin?',
-    	type: 'success'
-    }
-
-    this.props.showAlert(swalOptions);
-  }
-
   toggleChangePassword() {
-    // this.setState({ modalType: 'New' });
     this.setState({ modal: !this.state.modal });
   }
 
@@ -120,13 +107,6 @@ class MyAccountForm extends Component {
               <br/>
             </div>
           </div>
-
-          {/* {this.props.submitFailed
-            ? <div className="is-invalid ml-3 mt-2 d-inline-block pull-right">
-                <h5 className="mb-0"><i className="fa fa-exclamation-circle"></i> Errors above</h5>
-              </div>
-            : ''
-          } */}
         </form>
         <ChangePasswordModal
           isOpen={this.state.modal}
@@ -150,9 +130,8 @@ function mapStateToProps(state, ownProps) {
   }
 }
 
-MyAccountForm = connect(mapStateToProps, {updateRecord, createAlert, setUser, ...swal})(MyAccountForm);
+MyAccountForm = connect(mapStateToProps, {updateRecord, createAlert, setUser})(MyAccountForm);
 
-// below is also taking care of connecting actions
 export default reduxForm({
   form: 'myAccount',
   validate

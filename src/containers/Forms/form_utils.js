@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
-import ReduxFormDropdownList from '../../components/ReduxFormDropdownList/ReduxFormDropdownList';
-import ReduxFormDate from '../../components/ReduxFormDate/ReduxFormDate';
+import ReduxFormDropdownList from '../../components/ReduxFormDropdownList';
+import ReduxFormDate from '../../components/ReduxFormDate';
 
 function renderFieldType(field, inputClassName, iconClassName) {
   switch (field.formElement) {
@@ -13,7 +13,6 @@ function renderFieldType(field, inputClassName, iconClassName) {
             className={inputClassName}
             {...field.input}
             options={field.options}
-            // style={{ padding: 0 }}
           />
         </div>
       );
@@ -25,8 +24,6 @@ function renderFieldType(field, inputClassName, iconClassName) {
             <ReduxFormDate
               className={inputClassName}
               {...field.input}
-              // options={field.options}
-              // style={{ padding: 0 }}
             />
 
           </div>
@@ -50,14 +47,6 @@ function renderFieldType(field, inputClassName, iconClassName) {
           </label>
           <textarea rows="10" className={inputClassName} {...field.input}>
           </textarea>
-
-          {/* <ReduxFormTextarea
-            label={field.label}
-            className={inputClassName}
-            input={field.input}
-            charLimit={field.charLimit}
-            // {...field.input}
-          /> */}
         </div>
       );
       break;
@@ -108,19 +97,14 @@ function renderFieldType(field, inputClassName, iconClassName) {
 
 export const renderComponent = (field) => {
   const { meta: { touched, dirty, submitFailed, error, invalid, valid, active } } = field;
-  // const groupClassName = `form-group ${ (touched || submitFailed) && invalid ? 'is-invalid' : ''}`;
   const groupClassName = classNames({
     "form-group": true,
     "is-invalid": (touched || submitFailed) && invalid,
-    // "input-group": field.formIcon !== undefined ? true : false,
-    // "is-valid": submitFailed && valid && !active
   });
 
-  // const inputClassName = `form-control ${ (touched || submitFailed) && invalid ? 'is-invalid' : ''}`;
   const inputClassName = classNames({
     "form-control": true,
     "is-invalid": (touched || submitFailed) && invalid,
-    // "is-valid": submitFailed && dirty && valid && !active
   });
 
   const iconClassName = classNames({

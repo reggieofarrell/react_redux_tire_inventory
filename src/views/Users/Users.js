@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import IventoryBootstrapTable from '../../containers/IventoryBootstrapTable/IventoryBootstrapTable';
+import IventoryBootstrapTable from '../../containers/IventoryBootstrapTable';
 import actionsBtnConfig from '../../components/BsTableActionsDropdown/_dropdownColConfig';
 
 const Users = () => {
@@ -11,7 +11,8 @@ const Users = () => {
     export: false,
     isKey: true
   },
-  actionsBtnConfig, {
+  actionsBtnConfig,
+  {
     dataField: "Email",
     displayName: "Email / Login",
     formEditReadOnly: true,

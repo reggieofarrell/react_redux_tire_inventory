@@ -10,9 +10,8 @@ export function setUser() {
           payload: response.data
         });
       })
-      .catch(response => {
-        console.log('error fetching current user', response);
-        throw (`Error fetching current user from ${endpoint}`);
+      .catch(error => {
+        console.log('setUser Error:', error);
       });
   }
 }
@@ -36,7 +35,6 @@ export function createAlert(alert) {
 export function dismissAlert(alert) {
   return function(dispatch, getState) {
     const reduxState = getState();
-    console.log('redux state at dismissAlert action', reduxState);
     dispatch({
       type: DISMISS_ALERT,
       payload: reduxState.alerts[0]

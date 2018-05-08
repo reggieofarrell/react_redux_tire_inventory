@@ -21,13 +21,9 @@ const initialState = {
   loadAllAvails: false
 };
 
-// incorporating state as object rather than array
 export default function(state = initialState, action) {
-  // setup switch statement to have the reducer listen for the imported actions
   switch (action.type) {
     case DELETE_RECORD:
-      // remove recod from state so that state doesn't have to be
-      // re-fetched
       return _.omit(state, action.payload);
       break;
     case FETCH_RECORD:
@@ -53,11 +49,7 @@ export default function(state = initialState, action) {
     case LOAD_ALL_AVAILS:
       return { ...state, loadAllAvails: action.payload };
       break;
-    // case LOAD_ALL_AVAILS:
-    //   return { ...state, loadAllAvails: true };
-    //   break;
     default:
-      // console.log('default in crud reducers hit');
       return state;
 
   }

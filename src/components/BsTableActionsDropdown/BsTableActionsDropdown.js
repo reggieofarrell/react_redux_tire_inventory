@@ -20,7 +20,6 @@ export default class BsTableActionsDropdown extends React.Component {
   }
 
   toggleEditRecordModal() {
-    console.log('toggleEditRecordModal row', this.props.record);
     this.props.setRecord(this.props.record);
     this.props.toggleEdit();
   }

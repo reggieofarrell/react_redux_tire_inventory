@@ -1,7 +1,6 @@
-import React, {Component} from 'react';
-import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
-import {Row, Col, Button} from 'reactstrap';
-// import axios from 'axios';
+import React, { Component } from 'react';
+import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
+import { Row, Col, Button } from 'reactstrap';
 import { client } from '../../actions/client.js';
 import json2csv from 'json2csv';
 import _ from 'lodash';
@@ -11,12 +10,9 @@ import { connect } from 'react-redux';
 import { fetchCollection, deleteRecord, loadAllAvails } from '../../actions/crud_actions';
 import { createAlert } from '../../actions';
 
-import BsTableActionsDropdown from '../../components/BsTableActionsDropdown/BsTableActionsDropdown';
-import NewRecordModal from '../../components/Modals/NewRecordModal';
-import AvgCostModal from '../../components/Modals/AvgCostModal';
-import CustomCheckbox from '../../components/CustomCheckbox/CustomCheckbox';
-import { swal } from 'react-redux-sweetalert2';
-// import { AlertList, Alert, AlertContainer } from "react-bs-notifier";
+import BsTableActionsDropdown from '../../components/BsTableActionsDropdown';
+import { NewRecordModal, AvgCostModal } from '../../components/Modals';
+import CustomCheckbox from '../../components/CustomCheckbox';
 
 class IventoryBootstrapTable extends Component {
   constructor(props){
@@ -28,7 +24,6 @@ class IventoryBootstrapTable extends Component {
       editRecordValues: {},
       selectOptions: {},
       avgCostModal: false,
-      // allRecords: false
       filteredResults: [],
       avgCost: 0
     };
@@ -117,6 +112,7 @@ class IventoryBootstrapTable extends Component {
       this.props.fetchCollection(this.props.endpoint);
     }
 
+    // get from select options from API
     const selects = _.filter(this.props.columns, ['formElement', 'select']);
     let selectState = {};
     let processedSelects = 0;
@@ -124,7 +120,6 @@ class IventoryBootstrapTable extends Component {
     selects.forEach(select => {
       if (!select.hardSelectOptions) {
         client.get(`${select.endpoint}`).then(response => {
-          // console.log(`${select.endpoint} response: `, response);
           const options = response.data.map(data => {
             return {
               label: data[select.selectLabel],
@@ -286,9 +281,6 @@ class IventoryBootstrapTable extends Component {
           {(!!this.props.hasAvgCost && this.props.hasAvgCost) && avgCostButton()}
         </ButtonGroup>
         {this.props.hasLoadAll && loadAllCbx()}
-        {/* <div className="i-block">
-          Total Records: { this.getFilteredResults() !== undefined ? this.getFilteredResults() : '' }
-        </div> */}
       </div>
     );
   }
@@ -374,6 +366,5 @@ export default connect(mapStateToProps, {
   fetchCollection,
   deleteRecord,
   createAlert,
-  ...swal,
   loadAllAvails
 })(IventoryBootstrapTable);

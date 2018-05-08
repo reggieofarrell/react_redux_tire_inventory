@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import IventoryBootstrapTable from '../../containers/IventoryBootstrapTable/IventoryBootstrapTable';
+import IventoryBootstrapTable from '../../containers/IventoryBootstrapTable';
 import actionsBtnConfig from '../../components/BsTableActionsDropdown/_dropdownColConfig';
 
 class Avails extends Component {
@@ -15,7 +15,8 @@ class Avails extends Component {
     isKey: true,
     hiddenOnInsert: true
   },
-  actionsBtnConfig, {
+  actionsBtnConfig,
+  {
     dataField: "Status",
     validator: "requiredField",
     formElement: 'select',
@@ -30,15 +31,11 @@ class Avails extends Component {
     dataField: "AvailDate",
     displayName: "Avail Date",
     dataFormatType: 'date',
-    // inputType: "date",
     formElement: 'date',
     validator: "requiredField",
     filter: {
       type: 'DateFilter'
     },
-    // filter: {
-    //   type: 'NumberFilter'
-    // },
     width: "250px"
   }, {
     dataField: "SupplierName",
@@ -59,8 +56,6 @@ class Avails extends Component {
     selectLabel: "SupplierName",
     endpoint: "Suppliers"
   },
-  // { dataField: "VendorRating", displayName: 'V Rat', formFieldDisplayName: 'Vendor Rating', formElement: 'select',
-  // hardSelectOptions:[null, '1', '2', '3', '4'] },
   {
     dataField: "BrandName",
     displayName: "Brand",
@@ -78,9 +73,8 @@ class Avails extends Component {
     formElement: 'select',
     selectLabel: "BrandName",
     endpoint: "TireBrands",
-    validator: "requiredField",
-  },
-  {
+    validator: "requiredField"
+  }, {
     dataField: "Quality",
     hiddenOnInsert: true,
     filter: {
@@ -88,7 +82,6 @@ class Avails extends Component {
     },
     width: "120px"
   },
-  // { dataField: "Quality", formElement: 'select', hardSelectOptions:[null, 'Brand Name', 'E. European', 'Chinese', 'Other Asian'] },
   {
     dataField: "ModelName",
     displayName: "Model",
@@ -106,8 +99,7 @@ class Avails extends Component {
     formElement: 'select',
     selectLabel: "ModelName",
     endpoint: "TireModels"
-  },
-  {
+  }, {
     dataField: "TirePattern",
     displayName: "Pat",
     hiddenOnInsert: true,
@@ -141,7 +133,7 @@ class Avails extends Component {
     formElement: 'select',
     selectLabel: "TireSize",
     endpoint: "TireSizes",
-    validator: "requiredField",
+    validator: "requiredField"
   }, {
     dataField: "CondCode",
     displayName: "Cond",
@@ -178,8 +170,7 @@ class Avails extends Component {
     formElement: 'select',
     selectLabel: "PlyRating",
     endpoint: "PlyRatings"
-  },
-  {
+  }, {
     dataField: "RubberCompound",
     displayName: "R Comp",
     hiddenOnInsert: true,
@@ -208,8 +199,7 @@ class Avails extends Component {
       type: 'TextFilter'
     },
     width: "80px"
-  },
-  {
+  }, {
     dataField: "TRACode",
     displayName: "TRA",
     hiddenOnInsert: true,
@@ -237,7 +227,7 @@ class Avails extends Component {
     dataFormatType: 'number',
     formIcon: 'fa fa-dollar',
     validator: 'requiredField'
-  },{
+  }, {
     dataField: "Quantity",
     displayName: "Qty",
     filter: {
@@ -247,9 +237,8 @@ class Avails extends Component {
     filterFormatted: true,
     sortType: 'numeric',
     width: "130px",
-    validator: "greaterThanZero",
-  },
-  {
+    validator: "greaterThanZero"
+  }, {
     dataField: "TotalCost",
     displayName: "Total Cost",
     hiddenOnInsert: true,
@@ -270,7 +259,7 @@ class Avails extends Component {
     sortType: 'numeric',
     dataFormatType: 'number',
     validator: 'fourDidgetYear'
-  },{
+  }, {
     dataField: "Currency",
     displayName: "Cur",
     formFieldDisplayName: "Currency",
@@ -283,36 +272,15 @@ class Avails extends Component {
       type: 'TextFilter'
     },
     width: "80px"
-  },
-  {
+  }, {
     dataField: "FOBLocation",
     displayName: "Loc",
     formFieldDisplayName: "FOB Location",
-    // hiddenOnInsert: true,
     filter: {
       type: 'TextFilter'
     },
     width: "100px"
   },
-  // {
-  //   dataField: "FOBLocation",
-  //   displayName: "Loc",
-  //   hiddenOnInsert: true,
-  //   filter: {
-  //     type: 'TextFilter'
-  //   },
-  //   width: "100px"
-  // },
-  // {
-  //   dataField: "FOBLocID",
-  //   export: false,
-  //   hidden: true,
-  //   hiddenOnInsert: false,
-  //   formFieldDisplayName: "FOB Location",
-  //   formElement: 'select',
-  //   selectLabel: "FOBLocation",
-  //   endpoint: "FobLocations"
-  // },
   {
     dataField: "PackageName",
     displayName: "Pkg Name",

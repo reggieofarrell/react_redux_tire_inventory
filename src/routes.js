@@ -5,7 +5,6 @@ const routes = {
   '/avails': 'Avails',
   '/my-account': 'My Account',
   '/fob-locations': 'FOB Locations',
-  // '/options': 'Options',
   '/options/tire-brands': 'Options / Tire Brands',
   '/options/tire-patterns': 'Options / Tire Patterns',
   '/options/tire-sizes': 'Options / Tire Sizes',
@@ -14,6 +13,5 @@ const routes = {
   '/options/ply-ratings': 'Options / Ply Ratings',
   '/options/rubber-compounds': 'Options / Rubber Compounds',
   '/admin/users': 'Admin / Users',
-  // '/admin/users': 'Users',
 };
 export default routes;
