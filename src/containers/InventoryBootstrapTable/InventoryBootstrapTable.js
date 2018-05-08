@@ -14,7 +14,7 @@ import BsTableActionsDropdown from '../../components/BsTableActionsDropdown';
 import { NewRecordModal, AvgCostModal } from '../../components/Modals';
 import CustomCheckbox from '../../components/CustomCheckbox';
 
-class IventoryBootstrapTable extends Component {
+class InventoryBootstrapTable extends Component {
   constructor(props){
   	super(props);
   	this.state = {
@@ -367,4 +367,4 @@ export default connect(mapStateToProps, {
   deleteRecord,
   createAlert,
   loadAllAvails
-})(IventoryBootstrapTable);
+})(InventoryBootstrapTable);

@@ -21,7 +21,7 @@ import Avails from '../../views/Avails';
 import PlyRatings from '../../views/PlyRatings';
 import MyAccount from '../../views/MyAccount';
 import Users from '../../views/Users';
-import IventoryAlert from '../IventoryAlert';
+import InventoryAlert from '../InventoryAlert';
 
 class Full extends Component {
 
@@ -50,7 +50,7 @@ class Full extends Component {
                 <Route path="/my-account" name="My Account" component={MyAccount}/>
                 <Redirect from="/" to="/dashboard"/>
               </Switch>
-              <IventoryAlert />
+              <InventoryAlert />
             </Container>
           </main>
           <Aside />

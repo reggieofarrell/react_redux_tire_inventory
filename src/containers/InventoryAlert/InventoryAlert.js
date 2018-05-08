@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { AlertList } from "react-bs-notifier";
 import { createAlert, dismissAlert } from '../../actions';
 
-class IventoryAlert extends Component {
+class InventoryAlert extends Component {
   render() {
     return (
       <AlertList
@@ -21,4 +21,4 @@ function mapStateToProps({alerts}) {
   return {alerts};
 }
 
-export default connect(mapStateToProps, {createAlert, dismissAlert})(IventoryAlert);
+export default connect(mapStateToProps, {createAlert, dismissAlert})(InventoryAlert);

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import IventoryBootstrapTable from '../../containers/IventoryBootstrapTable';
+import InventoryBootstrapTable from '../../containers/InventoryBootstrapTable';
 import actionsBtnConfig from '../../components/BsTableActionsDropdown/_dropdownColConfig';
 
 const TirePatterns = () => {
@@ -22,7 +22,7 @@ const TirePatterns = () => {
 
   return (
     <div className="">
-      <IventoryBootstrapTable endpoint="TirePatterns" columns={columns} />
+      <InventoryBootstrapTable endpoint="TirePatterns" columns={columns} />
     </div>
   );
 };

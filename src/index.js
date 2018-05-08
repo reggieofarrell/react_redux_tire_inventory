@@ -15,7 +15,7 @@ import '../scss/core/_dropdown-menu-right.scss'
 import '../node_modules/react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
 import 'react-datepicker/dist/react-datepicker.css';
 
-import Full from './containers/Full/'
+import Full from './containers/Full'
 import reducers from './reducers';
 
 const store = createStore(reducers, composeWithDevTools(

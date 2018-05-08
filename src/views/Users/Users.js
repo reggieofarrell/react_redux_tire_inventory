@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import IventoryBootstrapTable from '../../containers/IventoryBootstrapTable';
+import InventoryBootstrapTable from '../../containers/InventoryBootstrapTable';
 import actionsBtnConfig from '../../components/BsTableActionsDropdown/_dropdownColConfig';
 
 const Users = () => {
@@ -59,7 +59,7 @@ const Users = () => {
 
   return (
     <div className="">
-      <IventoryBootstrapTable endpoint="User" columns={columns} />
+      <InventoryBootstrapTable endpoint="User" columns={columns} />
     </div>
   );
 };

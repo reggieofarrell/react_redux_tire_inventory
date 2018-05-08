@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import IventoryBootstrapTable from '../../containers/IventoryBootstrapTable';
+import InventoryBootstrapTable from '../../containers/InventoryBootstrapTable';
 import actionsBtnConfig from '../../components/BsTableActionsDropdown/_dropdownColConfig';
 
 class Avails extends Component {
@@ -335,7 +335,7 @@ class Avails extends Component {
   render() {
     return (
       <div className="">
-        <IventoryBootstrapTable
+        <InventoryBootstrapTable
           endpoint="Avails"
           columns={this.columns}
           selectOptions={this.selectOptions}
