@@ -43,7 +43,12 @@ class MyAccount extends Component {
           </Col>
         </Row>
         <br/>
-        <MyAccountForm initialValues={this.props.user} formFields={formFields} changePasswordFormFields={this.changePasswordFormFields} enableReinitialize/>
+        <MyAccountForm
+          initialValues={this.props.user}
+          formFields={formFields}
+          changePasswordFormFields={this.changePasswordFormFields}
+          enableReinitialize
+        />
       </div>
     );
   }
