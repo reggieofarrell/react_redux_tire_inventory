@@ -35,10 +35,6 @@ class NewRecordModal extends Component {
             refreshTable={this.props.refreshTable}
           />
         </ModalBody>
-        {/* <ModalFooter>
-          <Button color="primary" onClick={this.props.toggle}>Submit</Button>{' '}
-          <Button color="secondary" onClick={this.props.toggle}>Cancel</Button>
-        </ModalFooter> */}
       </Modal>
     );
   }

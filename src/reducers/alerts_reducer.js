@@ -1,14 +1,6 @@
 import { CREATE_ALERT, DISMISS_ALERT } from '../actions/types';
 import _ from 'lodash';
 
-// const initialState = [
-//   {
-//     id: '',
-//     message: '',
-//     headline: ''
-//   }
-// ];
-
 export default function(state = [], action) {
   switch (action.type) {
     case CREATE_ALERT:
