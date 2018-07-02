@@ -161,7 +161,6 @@ export function deleteRecord(endpoint, id, successCallback, errorCallback = null
   return function(dispatch) {
     client.delete(`${endpoint}/${id}`)
       .then(response => {
-        console.log('delete record response', response);
         successCallback();
       })
       .catch(error => {
